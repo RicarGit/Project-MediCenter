@@ -7,11 +7,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color:#D8D8D8;
+}
+
 /* HEADER */
 
 .header-bg {
     display: flex;
+    margin: auto;
     height: 120px;
+    max-width: 1590px;
+    background-color: #fff;
 }
 .container {
     width: 990px;
