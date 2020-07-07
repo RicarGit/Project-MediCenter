@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 ul, ol {
     list-style: none;
@@ -12,11 +12,29 @@ ul, ol {
 a {
     text-decoration: none;
 }
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'PT Sans';
+    font-weight: normal;
+}
 
 /* BODY */
 
 body {
     background-color:#D8D8D8;
+}
+.css-awards {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.css-awards a {
+    width: 115px;
+    height: 115px;
+    background-image: url(../images/cssawards_featured_dark.png);
+    text-indent: 0px;
+    display: block;
+
 }
 
 /* GENERAL CONTAINERS */
@@ -38,7 +56,7 @@ body {
 .header-container {
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 121px;
 }
 .logo {
     display: flex;
@@ -82,3 +100,86 @@ nav ul li a:hover {
 }
 
 /* BANNER */
+
+.banner-bg {
+    height: 670px;
+    background-image: url(../images/img1.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+.banner-area {
+    height: inherit;
+    flex-direction: column;
+    justify-content: end;
+}
+.banner-title {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    text-shadow: 0 1px 0 #4e4e4e;
+}
+.banner-title h1 {
+    font-size: 70px;
+    line-height: 70px;
+}
+.banner-title h3 {
+    font-size: 23px;
+    line-height: 35px;
+    margin-top: 20px;
+}
+.banner-infos {
+    display: flex;
+}
+.banner-info-box01,
+.banner-info-box02,
+.banner-info-box03 {
+    flex: 1;
+    color: #fff;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+.banner-info-box01 {
+    background-color: #42B3E5;
+}
+.banner-info-box02 {
+    background-color: #0384CE;
+}
+.banner-info-box03 {
+    background-color: #3156A3;
+}
+.banner-info-box03 h2 {
+    margin-bottom: 5px;
+}
+.box-info-title {
+    margin-bottom: 20px;
+}
+.box-info-content {
+    font-size: 13px;
+    margin-bottom: 26px;
+    line-height: 19px;
+}
+.banner-infos a {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 25px 6px 6px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    background-image: url(../images/icon_arrow_margin_right_white.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.banner-infos a:hover {
+    color: #000;
+    background-color: #fff;
+    background-image: url(../images/icon_arrow_margin_right_black.png);
+}
+.box-info-opening-hours li {
+    display: flex;
+    border-bottom: 1px solid #4b72c2;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.box-info-opening-hours span {
+    padding: 12px 0;
+}
