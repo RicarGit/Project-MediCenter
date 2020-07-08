@@ -186,3 +186,114 @@ nav ul li a:hover {
 
 /* INTERNAL PAGE */
 
+.latest-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+}
+.latest-news-left,
+.latest-news-right {
+    flex: 1;
+    margin-right: 30px;
+}
+.news {
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+}
+.news-no-image {
+    display: none;
+}
+.news-image {
+    height: 190px;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.news-image.first-img {
+    background-image: url(../images/image_03.jpg);
+}
+.news-image.last-img {
+    background-image: url(../images/image_02.jpg);
+}
+.news-content h2 {
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.news-content p {
+    color: #737373;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+
+.news-posted-in {
+    margin: 40px 0 30px 0;
+    font-size: 11px;
+    color: #888;
+}
+.news-posted-in a {
+    color: #888;
+    text-decoration: underline;
+}
+.news-posted-in a:hover {
+    color: #3156A3;
+}
+
+/* WIDGET TITLE FOR THE SITE'S CONTENT */
+.widget-content-title {
+    flex-basis: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+.widget-title{
+    font-size: 18px;
+    color: #000;
+}
+.widget-title::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: block;
+    margin-top: 8px;
+    background-color: #42B3E5;
+}
+
+/* WIDGET FOR POSTS DATES AND COMENTARY QUANTITIES */
+.widget-date-posts {
+    display: flex;
+    margin-bottom: 30px;
+}
+.widget-date {
+    position: relative;
+    padding: 10px 12px;
+    background-color: #3156A3;
+    margin-right: 2px;
+    color: #fff;
+    font-size: 11px;
+
+}
+.widget-date::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    border-top: 4px solid #3156A3;
+    border-left: 4px solid #3156A3;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.widget-posts a {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: #42B3E5;
+    color: #fff;
+    font-size: 11px;
+}
+
+
+.aside-area {
+    flex: 1;
+}
