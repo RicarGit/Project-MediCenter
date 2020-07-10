@@ -186,6 +186,9 @@ nav ul li a:hover {
 
 /* INTERNAL PAGE */
 
+.internal-page-bg {
+    padding-bottom: 50px;
+}
 .latest-news-container {
     display: flex;
     flex-wrap: wrap;
@@ -292,7 +295,21 @@ nav ul li a:hover {
     color: #fff;
     font-size: 11px;
 }
+.show-all {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 30px;
+    justify-content: end;
+}
+.show-all a{
+    display: inline-block;
+    color: #3156A3;
+    border-bottom: 1px dotted #3156A3;
+    font-size: 13px;
+}
 
+/* ASIDE AREA */
 
 .aside-area {
     flex: 1;
