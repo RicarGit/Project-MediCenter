@@ -302,11 +302,14 @@ nav ul li a:hover {
     margin-right: 30px;
     justify-content: end;
 }
-.show-all a{
+.show-all a {
     display: inline-block;
     color: #3156A3;
     border-bottom: 1px dotted #3156A3;
     font-size: 13px;
+}
+.show-all a:hover {
+    border-bottom: 1px solid;
 }
 
 /* ASIDE AREA */
@@ -314,3 +317,150 @@ nav ul li a:hover {
 .aside-area {
     flex: 1;
 }
+
+/* DEPARTMENTS */
+.departments-contents {
+    margin-top: 30px;
+}
+.departments-widget {
+    display: flex;
+    flex-direction: column;
+}
+.departments-widget-content {
+    display: flex;
+    margin-top: 20px;
+}
+.departments-widget-title {
+    background-color: #3156A3;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 15px;
+}
+.departments-widget-title h3 {
+    background-image: url(../images/Minus.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.departments-widget-img {
+    min-height: 75px;
+    min-width: 75px;
+    background-image: url(../images/image_08.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.departments-widget-text {
+    color: #737373;
+    font-size: 13px;
+    padding: 0 18px;
+    line-height: 20px;
+}
+.departments-widget-details {
+    display: flex;
+    justify-content: flex-end;
+}
+.departments-widget-details a {
+    padding: 7px 25px 7px 8px;
+    background-color: #3156A3;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 13px;
+    background-image: url(../images/icon_arrow_margin_right_white.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.departments-widget-details a:hover {
+    background-color: #42B3E5;
+}
+.departments-widget-details a:first-child {
+    margin-right: 2px;
+}
+.clinic-specialists-area ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 13px 9px 0;
+    border-bottom: 1px solid #ddd;
+}
+.clinic-specialist a {
+    color: #737373;
+    background-image: url(../images/Plus.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    letter-spacing: 0.5px;
+    font-family: 'PT Sans';
+    font-size: 18px;
+}
+.clinic-specialist a:hover {
+    color: #3156A3;
+}
+
+/* APPOINTMENT */
+
+.appointment-area {
+    padding-top: 20px;
+}
+.appointment-content {
+    margin-top: 30px;
+}
+.appointment-content-text {
+    color: #737373;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 12px 0 12px 0;
+    font-size: 13px;
+    color: #737373;
+}
+.contact-info li:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.contact-info li span {
+    font-weight: bold;
+    color: #000;
+}
+.email a {
+    color: #3156A3;
+    border-bottom: 1px dotted #3156A3;
+}
+.email a:hover {
+    border-bottom: 1px solid;
+}
+.form a {
+    color: #3156A3;
+    border-bottom: 1px dotted #3156A3;
+}
+.form a:hover {
+    border-bottom: 1px solid;
+}
+.contact-icon {
+    height: 29px;
+    width: 29px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.tel-icon {
+    background-image: url(../images/phone.png);
+}
+.email-icon {
+    background-image: url(../images/mail.png);
+}
+.form-icon {
+    background-image: url(../images/form.png);
+}
+.contact-info li:hover .contact-icon {
+    background-position: bottom;
+}
+
+/* FOOTER */
