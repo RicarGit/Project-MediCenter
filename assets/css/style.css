@@ -302,11 +302,14 @@ nav ul li a:hover {
     margin-right: 30px;
     justify-content: end;
 }
-.show-all a{
+.show-all a {
     display: inline-block;
     color: #3156A3;
     border-bottom: 1px dotted #3156A3;
     font-size: 13px;
+}
+.show-all a:hover {
+    border-bottom: 1px solid;
 }
 
 /* ASIDE AREA */
@@ -394,3 +397,70 @@ nav ul li a:hover {
 
 /* APPOINTMENT */
 
+.appointment-area {
+    padding-top: 20px;
+}
+.appointment-content {
+    margin-top: 30px;
+}
+.appointment-content-text {
+    color: #737373;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 12px 0 12px 0;
+    font-size: 13px;
+    color: #737373;
+}
+.contact-info li:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.contact-info li span {
+    font-weight: bold;
+    color: #000;
+}
+.email a {
+    color: #3156A3;
+    border-bottom: 1px dotted #3156A3;
+}
+.email a:hover {
+    border-bottom: 1px solid;
+}
+.form a {
+    color: #3156A3;
+    border-bottom: 1px dotted #3156A3;
+}
+.form a:hover {
+    border-bottom: 1px solid;
+}
+.contact-icon {
+    height: 29px;
+    width: 29px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.tel-icon {
+    background-image: url(../images/phone.png);
+}
+.email-icon {
+    background-image: url(../images/mail.png);
+}
+.form-icon {
+    background-image: url(../images/form.png);
+}
+.contact-info li:hover .contact-icon {
+    background-position: bottom;
+}
+
+/* FOOTER */
