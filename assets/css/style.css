@@ -80,6 +80,13 @@ nav ul li a:hover {
     background-color: #42B3E5;
     color: #fff;
 }
+.menu {
+    position: relative;
+}
+.menu a {
+    z-index: 999;
+    position: relative;
+}
 .active {
     background-color: #42B3E5;
     color: #fff;
@@ -89,19 +96,80 @@ nav ul li a:hover {
     color: #000;
     border: 1px solid #ddd;
     border-bottom: #fff;
-    z-index: 999;
 }
 .nav-hover:hover {
     background-color: #fff;
     color: #000;
     border: 1px solid #ddd;
     border-bottom: #fff;
-    z-index: 999;
 }
 .nav-contact:hover {
     background-color: #42B3E5;
     color: #fff;
 }
+/* MENU DROPDOWN */
+.menu-dropdown {
+    width: 190px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    flex-direction: column;
+    position: absolute;
+    top: 28px;
+    font-size: 12px;
+    text-transform: none;
+    padding-bottom: 10px;
+    display: none;
+}
+.menu-dropdown a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    margin-right: 0;
+}
+.menu-dropdown a:hover {
+    background-color: #fff;
+    color: #000;
+    border-bottom: 2px solid #42B3E5;
+}
+.menu-dropdown.menu-wide {
+    width: 380px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.menu-dropdown.menu-wide li {
+    width: 189px;
+}
+.menu-dropdown.menu-wide.wide-left {
+    left: 76px;
+}
+.left {
+    right: 99px;
+}
+.sub-menu {
+    padding: 0 15px;
+}
+.menu-home:hover .home {
+    display: flex;
+}
+.menu-blog:hover .blog {
+    display: flex;
+}
+.menu-pages:hover .pages {
+    display: flex;
+}
+.department {
+    vertical-align: auto;
+}
+.menu-department:hover .department {
+    display: flex;
+}
+.menu-timetable:hover .timetable {
+    display: flex;
+}
+.menu-gallery:hover .gallery {
+    display: flex;
+}
+
 
 /* BANNER */
 
