@@ -120,6 +120,9 @@ nav ul li a:hover {
     padding-bottom: 10px;
     display: none;
 }
+.menu-dropdown:hover {
+    display: flex;
+}
 .menu-dropdown a {
     display: block;
     border-bottom: 1px solid #ddd;
@@ -167,6 +170,19 @@ nav ul li a:hover {
     display: flex;
 }
 .menu-gallery:hover .gallery {
+    display: flex;
+}
+.sub-menu-blog {
+    display: none;
+    position: absolute;
+    left: 174px;
+    top: 46px;
+}
+.sub-menu a {
+    padding: 15px;
+}
+
+.menu-dropdown a:hover+.sub-menu-blog {
     display: flex;
 }
 
