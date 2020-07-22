@@ -27,6 +27,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 .css-awards a {
     width: 115px;
@@ -34,7 +35,6 @@ body {
     background-image: url(../images/cssawards_featured_dark.png);
     text-indent: 0px;
     display: block;
-
 }
 
 /* GENERAL CONTAINERS */
@@ -126,7 +126,7 @@ nav ul li a:hover {
 .menu-dropdown a {
     display: block;
     border-bottom: 1px solid #ddd;
-    padding: 12px 0;
+    padding: 15px 0;
     margin-right: 0;
 }
 .menu-dropdown a:hover {
@@ -139,13 +139,13 @@ nav ul li a:hover {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.menu-dropdown.menu-wide li {
+.menu-dropdown.menu-wide .sub-menu {
     width: 189px;
 }
 .menu-dropdown.menu-wide.wide-left {
     left: 76px;
 }
-.left {
+.menu-dropdown.left.gallery {
     right: 99px;
 }
 .sub-menu {
@@ -178,14 +178,15 @@ nav ul li a:hover {
     left: 174px;
     top: 46px;
 }
-.sub-menu a {
-    padding: 15px;
-}
 
 .menu-dropdown a:hover+.sub-menu-blog {
     display: flex;
 }
 
+/* MENU MOBILE */
+nav.menu-mobile {
+    display: none;
+}
 
 /* BANNER */
 
@@ -201,8 +202,7 @@ nav ul li a:hover {
     justify-content: end;
 }
 .banner-title {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0;
     color: #fff;
     text-shadow: 0 1px 0 #4e4e4e;
 }
@@ -651,10 +651,43 @@ nav ul li a:hover {
     color: #d5d5d5;
     font-size: 13px;
 }
+.widget-latest-posts {
+    margin-bottom: 13px;
+}
+.widget-latest-posts-content {
+    padding: 5px 0;
+    color: #42B3E5;
+    font-size: 11px;
+}
+.widget-latest-posts-content p {
+    padding-left: 18px;
+    line-height: 19px;
+    position: relative;
+}
+.widget-latest-posts-content p::after {
+    content: '';
+    background-image: url(../images/icon_arrow_right_white.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 8px;
+}
+.widget-latest-posts-content a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.widget-latest-posts-content span {
+    color: #42B3E5;
+    font-size: 11px;
+    margin: 4px 0 0 18px;
+    display: block;
+}
+
 .footer-info-medicenter {
     color: #909090;
     font-size: 13px;
-
 }
 .footer-info-medicenter p {
     margin: 10px 30px 30px 0;
@@ -705,40 +738,6 @@ nav ul li a:hover {
 .footer-icon.email-icon {
     background-image: url(../images/footer-mail.png);
 }
-.widget-latest-posts {
-    margin-bottom: 13px;
-}
-.widget-latest-posts-content {
-    padding: 5px 0;
-    color: #42B3E5;
-    font-size: 11px;
-}
-.widget-latest-posts-content p {
-    padding-left: 18px;
-    line-height: 19px;
-    position: relative;
-}
-.widget-latest-posts-content p::after {
-    content: '';
-    background-image: url(../images/icon_arrow_right_white.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    left: 0;
-    top: 8px;
-}
-.widget-latest-posts-content a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.widget-latest-posts-content span {
-    color: #42B3E5;
-    font-size: 11px;
-    margin: 4px 0 0 18px;
-    display: block;
-}
 .tweets p {
     color: #909090;
     line-height: 19px;
@@ -770,4 +769,189 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-position: right;
     padding-right: 15px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1010px) {
+
+    .internal-page-bg .page-container {
+        padding-left: 30px;
+    }
+    nav ul li a {
+        padding: 12px;
+        margin-right: 0px;
+        font-size: 11px;
+    }
+    .menu-dropdown {
+        top:25px;
+        width: 160px;
+    }
+    .menu-dropdown.menu-wide {
+        width: 320px;
+    }
+    .menu-dropdown.menu-wide .sub-menu {
+        width: 159px;
+    }
+    .menu-dropdown.menu-wide.wide-left {
+        left: 29px;
+    }
+    .menu-dropdown.left.gallery {
+        right: 74px;
+    }
+    .logo img {
+        margin-left: 70px;
+        width: 180px;
+    }
+    .banner-title {
+        margin-left: 30px;
+    }
+    .banner-title h1 {
+        font-size: 60px;
+        margin: 0;
+    }
+    .banner-title h3 {
+        font-size: 20px;
+    }
+
+    .latest-news-container {
+        flex-direction: column;
+        flex: 1;
+        padding-right: 30px;
+    }
+    .aside-area {
+        padding-right: 30px;
+    }
+
+    .widget-content-title {
+        flex-basis: auto;
+    }
+
+    .footer-bg {
+        margin: 0;
+    }
+    .footer-info-medicenter {
+        padding-left: 30px;
+    }
+    .footer-info-latest-posts {
+        padding-right: 30px;
+    }
+    .footer-info-latest-tweets {
+        padding-right: 46px;
+    }
+    .copy {
+        width: 100%;
+        padding: 0 46px 0 30px;
+        border: none;
+    }
+    .copyright {
+        border-top: 1px solid #353535;
+    }
+}
+
+@media (max-width: 805px) {
+
+    .header-container {
+        height: 90px;
+    }
+    .menu {
+        display: none;
+    }
+    nav.menu-mobile {
+        display: block;
+        margin-right: 30px;
+    }
+    .mobile-box {
+        display: block;
+    }
+    .menu-mobile li {
+        height: 3px;
+        width: 30px;
+        margin: 7px 0;
+        background-color: #42B3E5;
+    }
+    .logo img {
+        margin-left: 90px;
+    }
+    .banner-bg {
+        height: 750px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .banner-title h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .banner-title h3 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .banner-infos {
+        flex-direction: column;
+    }
+    .banner-infos a {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    .banner-infos h2 {
+        font-size: 19px;
+    }
+    .banner-infos p {
+        font-size: 12px;
+    }
+    .banner-info-box03 span {
+        font-size: 12px;
+    }
+
+    .health-boxes {
+        flex-direction: column;
+        text-align: center;
+    }
+    .health-boxes h3 {
+        font-size: 19px;
+    }
+    .health-boxes a {
+        font-size: 12px;
+    }
+    .footer-infos {
+        padding-left: 30px;
+        flex-wrap: wrap;
+    }
+    .footer-info-medicenter {
+        padding-left: 0;
+        width: 100%;
+        flex: initial;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .internal-page-bg .page-container {
+        flex-direction: column;
+    }
+    .banner-info-box01,
+    .banner-info-box02,
+    .banner-info-box03 {
+        padding: 16px 25px;
+    }
+
+    .footer-infos {
+        flex-direction: column;
+    }
+    .footer-info-medicenter,
+    .footer-info-latest-posts {
+        border-bottom: 1px solid #353535;
+    }
+}
+
+@media (max-width: 570px) {
+
+    .logo img {
+        margin-left: 70px;
+    }
+
+    .banner-bg {
+        background-image: url(../images/image_02.jpg);
+    }
 }
