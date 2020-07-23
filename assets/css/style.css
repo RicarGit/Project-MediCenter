@@ -183,7 +183,7 @@ nav ul li a:hover {
     display: flex;
 }
 
-/* MENU MOBILE */
+/* MENU MOBILE HIDDEN */
 nav.menu-mobile {
     display: none;
 }
@@ -200,6 +200,7 @@ nav.menu-mobile {
     height: inherit;
     flex-direction: column;
     justify-content: end;
+    /* overflow: hidden; */
 }
 .banner-title {
     margin: auto 0;
@@ -217,6 +218,7 @@ nav.menu-mobile {
 }
 .banner-infos {
     display: flex;
+    animation: opacity-boxes 2s ease-in-out;
 }
 .banner-info-box01,
 .banner-info-box02,
@@ -224,15 +226,54 @@ nav.menu-mobile {
     flex: 1;
     color: #fff;
     flex-direction: column;
+    position: relative;
     padding: 20px 30px;
 }
+.banner-info-box02 {
+    animation: right-box02 1s ease-in-out;
+}
+.banner-info-box03 {
+    animation: right-box03 2s ease-in-out;
+}
+@keyframes opacity-boxes {
+
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes right-box02 {
+    
+    0% {
+        right: 330px;
+    }
+
+    50% {
+        right: 0;
+    }
+}
+@keyframes right-box03 {
+    
+    0% {
+        right: 660px;
+    }
+
+    50% {
+        right: 0;
+    }
+}
 .banner-info-box01 {
+    z-index: 3;
     background-color: #42B3E5;
 }
 .banner-info-box02 {
+    z-index: 2;
     background-color: #0384CE;
 }
 .banner-info-box03 {
+    z-index: 1;
     background-color: #3156A3;
 }
 .banner-info-box03 h2 {
@@ -336,7 +377,7 @@ nav.menu-mobile {
 .widget-content-title {
     flex-basis: 100%;
     margin-top: 30px;
-    position: relative;
+    overflow: hidden;
 }
 .widget-title{
     font-size: 18px;
@@ -349,6 +390,17 @@ nav.menu-mobile {
     display: block;
     margin-top: 8px;
     background-color: #42B3E5;
+    position: relative;
+    animation: right-widget 1.3s ease-in-out;
+}
+@keyframes right-widget {
+
+    0% {
+        right: 50%
+    }
+    50% {
+        right: 0;
+    }
 }
 
 /* WIDGET FOR POSTS DATES AND COMENTARY QUANTITIES */
@@ -564,6 +616,7 @@ nav.menu-mobile {
     display: flex;
     color: #fff;
     width: 100%;
+    animation: opacity-boxes 2s ease-in-out;
 }
 .health-boxes h3 {
     margin-bottom: 13px;
@@ -585,14 +638,24 @@ nav.menu-mobile {
 .health-box-03 {
     flex: 1;
     padding: 20px 30px 25px 30px;
+    position: relative;
+}
+.health-box-02 {
+    animation: right-box02 1s ease-in-out;
+}
+.health-box-03 {
+    animation: right-box03 2s ease-in-out;
 }
 .health-box-01 {
+    z-index: 3;
     background-color: #42B3E5;
 }
 .health-box-02 {
+    z-index: 2;
     background-color: #0384CE;
 }
 .health-box-03 {
+    z-index: 1;
     background-color: #3156A3;
 }
 .footer-infos {
@@ -858,6 +921,8 @@ nav.menu-mobile {
     .menu {
         display: none;
     }
+
+    /* MENU MOBILE */
     nav.menu-mobile {
         display: block;
         margin-right: 30px;
