@@ -428,6 +428,16 @@ nav.menu-mobile {
     border-left: 4px solid #3156A3;
     border-right: 4px solid transparent;
     border-bottom: 4px solid transparent;
+    animation: bottom 0.6s ease-in-out;
+}
+@keyframes bottom {
+
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: -6;
+    }
 }
 .widget-posts a {
     display: inline-block;
