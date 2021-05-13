@@ -473,14 +473,16 @@ nav.menu-mobile {
 .departments-widget {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
 }
 .departments-widget-content {
     display: flex;
     margin-top: 20px;
+    height: 80px;
+    transition: .5s;
 }
 .departments-widget-content.hidden {
-    display: none;
+    height: 0;
+    overflow: hidden;
 }
 .departments-widget-title {
     background-color: #3156A3;
@@ -510,6 +512,8 @@ nav.menu-mobile {
 .departments-widget-details {
     display: flex;
     justify-content: flex-end;
+    visibility: visible;
+    transition: 0.1s;
 }
 .departments-widget-details a {
     padding: 7px 25px 7px 8px;
@@ -522,7 +526,7 @@ nav.menu-mobile {
     background-position: right;
 }
 .departments-widget-details.hidden {
-    display: none;
+    visibility: hidden;
 }
 .departments-widget-details a:hover {
     background-color: #42B3E5;
